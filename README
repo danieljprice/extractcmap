@@ -1,0 +1,22 @@
+Utility for extracting the colour map from a png or gif file
+
+Image should be cropped and rotated so that it contains only the
+colourbar in a horizontal format (i.e. with colours changing from
+left to right)
+
+Requires netpbm tools to first convert image to plain ppm format
+
+Fortran code then quantizes the colour map to a small table of
+interpolation points in (l, red, green, blue) where l is the
+position in the interpolation table (0-1) and r,g,b are the
+colours at that position, where linear interpolation should
+be used between the points
+
+To use the interactive quantization tool you need the
+giza plotting library installed (http://giza.sf.net)
+
+Output is currently a Fortran table suitable for
+incorporation in the SPLASH visualisation tool
+(http://users.monash.edu.au/~dprice/splash)
+
+Written by Daniel Price 2005-2018
